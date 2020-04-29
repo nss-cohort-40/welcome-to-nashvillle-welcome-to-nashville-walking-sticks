@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Welcome to Nashville</title>
 </head>
+
 <body>
-    <h1 id="test">Test</h1>
-    <div class="test">
-        <p>Test</p>
-        <button></button>
-    </div>
+    <h1>Welcome to Nashville</h1>
+    <hr>
+    <h2>What do you want to see today?</h2>
+    <hr>
+    <section class="search-container">
+        <section class="parks-search-container">
+            <input type="text" placeholder="parks by feature" class="parks-search-input">
+            <button class="parks-search-button" id="button1">Search</button>
+        </section>
+        <section class="art-search-container">
+            <input type="text" placeholder="public art by description">
+            <button class="art-search-button" id="button2">Search</button>
+        </section>
+        <section class="restaurant-search-container">
+            <input type="text" placeholder="restaurant by genre(of food)" class="restaurant-search-input">
+            <button class="restaurant-search-button" id="button3">Search</button>
+        </section>
+        <section class="concert-search-container">
+            <input type="text" placeholder="concerts by genre" id="concert-input">
+            <button class="concert-search-button" id="button4">Search</button>
+        </section>
+    </section>
+    <section class="search-results">
+    </section>
+    <hr>
+    <section class="itinerary-display">
+        <h2>My Itinerary</h2>
+    </section>
     <script src="/src/scripts/dom.js"></script>
     <script src="/src/scripts/concerts-getter.js"></script>
     <script src="/src/scripts/search-concerts.js"></script>
+    <script src="/src/scripts/make-components.js"></script>
+    <script src="/src/scripts/results.js"></script>
+    <script src="/src/scripts/itinerary.js"></script>
 </body>
+
 </html>

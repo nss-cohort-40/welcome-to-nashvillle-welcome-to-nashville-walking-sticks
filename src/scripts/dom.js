@@ -1,41 +1,41 @@
 let rootElement = document.querySelector("body");
 
-// Bubbling event listener
-rootElement.addEventListener("click", function(event) {
-    let targetElement = event.target
-    console.log(targetElement.id);
-    
-    if (targetElement.parentElement.nodeName == "SEARCH-FIELD") {
-        if (targetElement.id == "btn1") {
-            // Call search function
-            
-        } else if (targetElement.id == "btn2") {
+rootElement.addEventListener("click", function (event) {
+  let targetElement = event.target;
+  if (targetElement.id == "button1") {
+  } else if (targetElement.id == "button2") {
+    document.querySelector(".search-results").innerHTML = "<h2>Results</h2>";
+    resultsController.resetResults();
+    searchParam = document.getElementById("art-input").value;
+    if (searchParam == "") {
+      resultsController.resetResults();
+      window.alert("Please enter a search term.");
+    } else {
+      searchArt(searchParam);
+    }
+  } else if (targetElement.id == "button3") {
+    resetResults();
+  } else if (targetElement.id == "button4") {
+    resultsController.resetResults();
+    document.querySelector(".search-results").innerHTML = "<h2>Results</h2>";
+    searchParam = document.getElementById("concert-input").value;
+    if (searchParam == "") {
+      resetResults();
+      window.alert("Please enter a search term.");
+    } else {
+      searchConcert(searchParam);
+    }
+  }
+});
 
-        } else if (targetElement.id == "btn3") {
+function dataHandler(data, counter, searchType) {
+  if (searchType == "concerts") {
+    content = makeConcertComponent(data, counter);
+    resultsController.renderResults(content);
+  }
+  else if (searchType == "public_art") {
+    content = makeArtComponent(data, counter)
+    resultsController.renderResults(content);
+  }
+}
 
-        } else if (targetElement.id == "btn4") {
-        }
-    } 
-})
-
-// const makeComponent = element => {
-//     if (element == "button1") {
-//         `<el>${counter}. ${parks.search().name}: ${parks.search().address}</el>
-//         <saveButton></saveButton>`
-//     } else 
-// }
-
-
-// function renderResults () {
-    
-// }
-
-// function renderItinerary() { 
-// }
-
-// function handler(element, section) {
-//     counter = 1;
-//     if (element == "button1" && section == "search") {
-//         makeComponent(element)
-//     }
-// }
