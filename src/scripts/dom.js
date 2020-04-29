@@ -16,9 +16,10 @@ rootElement.addEventListener("click", function (event) {
   } else if (targetElement.id == "button3") {
     resetResults();
   } else if (targetElement.id == "button4") {
+    // debugger
     resultsController.resetResults();
     document.querySelector(".search-results").innerHTML = "<h2>Results</h2>";
-    searchParam = document.getElementById("concert-input").value;
+    searchParam = document.getElementById("concert-search-input").value;
     if (searchParam == "") {
       resetResults();
       window.alert("Please enter a search term.");
