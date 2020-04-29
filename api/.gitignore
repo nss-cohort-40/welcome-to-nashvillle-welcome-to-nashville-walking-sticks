@@ -1,2 +1,3 @@
 /src/scripts/keys.js
-.DS_Store
+../.DS_Store
+../.vscode
