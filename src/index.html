@@ -6,11 +6,47 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="parksInput">
-    <button id="">Search</button>
+
+    <select id="parkFeatures">
+        <option value="" disabled selected>Choose Features</option>
+        <option value="community_center">Community Center</option>
+        <option value="nature_center">Nature Center</option>
+        <option value="playground">Playground</option>
+        <option value="ada_accessible">ADA Accessible</option>
+        <option value="restrooms_available">Restrooms</option>
+        <option value="picnic_shelters">Picnic Shelters</option>
+        <option value="dog_park">Dog Park</option>
+        <option value="baseball_fields">Baseball Fields</option>
+        <option value="basketball_courts">Basketball Courts</option>
+        <option value="volleyball">Volleyball</option>
+        <option value="soccer_fields">Soccer Fields</option>
+        <option value="football-multi-purpose-fields">Football Fields</option>
+        <option value="tennis_courts">Tennis Courts</option>
+        <option value="disc_golf">Disc Golf</option>
+        <option value="skate_park">Skate Park</option>
+        <option value="swimming_pool">Swimming Pool</option>
+        <option value="spray_park">Spray Park</option>
+        <option value="golf_course">Golf Course</option>
+        <option value="walk_jog_path">Walking Path</option>
+        <option value="hiking_trails">Hiking Trails</option>
+        <option value="horse_trails">Horse Trails</option>
+        <option value="mountain_bike_trails">Mountain Bike Trails</option>
+        <option value="boat_launch">Boat Launch</option>
+        <option value="camping_available_by_permit">Camping</option>
+        <option value="fishing_by_permit">Fishing</option>
+        <option value="lake">Lake</option>
+        <option value="canoe_launch">Canoe Launch</option>
+        <option value="community_garden">Community Garden</option>
+        <option value="historic_features">Historic Features</option>
+    </select>
+    <button id="searchFeatures">Search</button>
+    <section id="parksList">
+
+    </section>
     
 
-<script src="src/scripts/parks-getter.js"></script>
-<script src="src/scripts/search-parks.js"></script>
+<script src="scripts/parks-getter.js"></script>
+<script src="scripts/search-parks.js"></script>
+<script src="scripts/dom.js"></script>
 </body>
 </html>
