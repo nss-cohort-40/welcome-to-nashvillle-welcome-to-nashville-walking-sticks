@@ -37,5 +37,9 @@ function dataHandler(data, counter, searchType) {
     content = makeArtComponent(data, counter)
     resultsController.renderResults(content);
   }
+  else if (searchType == "parks") {
+    content = makeParkComponent(data, counter)
+    resultsController.renderResults(content);
+  }
 }
 
