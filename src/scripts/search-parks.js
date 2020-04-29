@@ -2,12 +2,7 @@ function getSelectedFeatures(){
     selectElement = document.querySelector (`#parkFeatures`);
     output = selectElement.options[selectElement.selectedIndex].value;
     searchParks()
-
 }
-
-
-document.getElementById("searchFeatures").addEventListener("click", getSelectedFeatures)
-
 function searchParks (park) {
     getParksAPI()
     .then(parks => {
