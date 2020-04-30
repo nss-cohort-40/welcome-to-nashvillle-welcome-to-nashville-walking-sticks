@@ -1,8 +1,13 @@
-// function searchRestaurant() {
-//     restaurantAPI.getRestaurant()
-//     .then(restaurantList => {
-//         console.table(restaurantList)
-//     })
-// }
+function searchRestaurant(pricePoint) {
+    restaurantAPI.getRestaurant()
+        .then(restaurantList => {
+            const listOfRestaurants = restaurantList.restaurants
+            for (let index = 0; index < listOfRestaurants.length; index++) {
+                if (listOfRestaurants[index].price <= pricePoint) {
+                    console.log(listOfRestaurants[index].name, listOfRestaurants[index].price)
+                }
+            }
+        })
+}
 
-// searchRestaurant()
+searchRestaurant(2)
