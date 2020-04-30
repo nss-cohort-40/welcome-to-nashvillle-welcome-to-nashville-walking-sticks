@@ -7,13 +7,13 @@ const makeConcertComponent = (data, counter) => {
 
 const makeArtComponent = (data, counter) => {
   return `
-    <p>${counter}. ${data.artwork} at ${data.location} 
+    <p id="content-${counter}">${counter}. ${data.artwork} at ${data.location} 
       <button type="submit" id="save-${counter}">Save</button>
       `;
 };
 
 const makeParkComponent = (data, counter) => {
-  return`<p>${counter}. ${data.park_name} at ${data.mapped_location.human_address} 
+  return`<p id ="content-${counter}">${counter}. ${data} 
   <button type="submit" id="save-${counter}">Save</button>
   `;
 }
@@ -21,11 +21,11 @@ const makeParkComponent = (data, counter) => {
 const makeItineraryComponent = (value, type) => {
   if (type == "concert") {
     return `<p id="concert-result">Concert: ${value}</p>`
-  } else if (type == "park") {
-    return ``
+  } else if (type == "parks") {
+    return `<p id="parks-result">Park: ${value}</p>`
   } else if (type == "restaurant") {
     return ``
   } else if (type == "art") {
-    return ``
+    return `<p id="art-result">Art: ${value}</p>`
   }
 };
