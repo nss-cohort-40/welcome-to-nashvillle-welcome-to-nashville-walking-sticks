@@ -1,6 +1,6 @@
 const makeConcertComponent = (data, counter) => {
   return `
-      <p>${counter}. ${data.name} at the ${data._embedded.venues["0"].name} 
+      <p id="content-${counter}">${counter}. ${data.name} at the ${data._embedded.venues["0"].name} 
       <button type="submit" id="save-${counter}">Save</button>
       `;
 };
@@ -18,6 +18,14 @@ const makeParkComponent = (data, counter) => {
   `;
 }
  
-const makeItineraryComponent = () => {
-  
+const makeItineraryComponent = (value, type) => {
+  if (type == "concert") {
+    return `<p id="concert-result">Concert: ${value}</p>`
+  } else if (type == "park") {
+    return ``
+  } else if (type == "restaurant") {
+    return ``
+  } else if (type == "art") {
+    return ``
+  }
 };
