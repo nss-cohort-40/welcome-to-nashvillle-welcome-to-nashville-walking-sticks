@@ -24,6 +24,14 @@ rootElement.addEventListener("click", function (event) {
     }
   } else if (targetElement.id == "button3") {
     resultsController.resetResults();
+    document.querySelector(".search-results").innerHTML = "<h2 id=\"results\">Restaurant Results</h2>";
+    searchParam = document.getElementById("restaurant-search-input").value;
+    if (searchParam == "") {
+      resultsController.resetResults();
+      window.alert("Please enter a search term.");
+    } else {
+      searchRestaurant(searchParam);
+    }
   } else if (targetElement.id == "button4") {
     // debugger
     resultsController.resetResults();
@@ -49,6 +57,9 @@ function dataHandler(data, counter, searchType) {
   else if (searchType == "parks") {
     content = makeParkComponent(data, counter)
     resultsController.renderResults(content);
+  } else if (searchType == "restaurant") {
+    content = makeRestaurantComponent(data, counter)
+    resultsController.renderResults(content)
   }
-}
+ }
 
