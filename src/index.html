@@ -4,86 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Welcome to Nashville</title>
   </head>
 
   <body>
-    <h1>Welcome to Nashville</h1>
-    <hr>
-    <h2>What do you want to see today?</h2>
-    <hr>
-    <section class="search-container">
-      <section class="parks-search-container">
-        <select class = "feature-list"id="park-search-input">
-          <option value="" disabled selected>Choose Feature</option>
-          <option value="community_center">Community Center</option>
-          <option value="nature_center">Nature Center</option>
-          <option value="playground">Playground</option>
-          <option value="ada_accessible">ADA Accessible</option>
-          <option value="restrooms_available">Restrooms</option>
-          <option value="picnic_shelters">Picnic Shelters</option>
-          <option value="dog_park">Dog Park</option>
-          <option value="baseball_fields">Baseball Fields</option>
-          <option value="basketball_courts">Basketball Courts</option>
-          <option value="volleyball">Volleyball</option>
-          <option value="soccer_fields">Soccer Fields</option>
-          <option value="football-multi-purpose-fields">Football Fields</option>
-          <option value="tennis_courts">Tennis Courts</option>
-          <option value="disc_golf">Disc Golf</option>
-          <option value="skate_park">Skate Park</option>
-          <option value="swimming_pool">Swimming Pool</option>
-          <option value="spray_park">Spray Park</option>
-          <option value="golf_course">Golf Course</option>
-          <option value="walk_jog_path">Walking Path</option>
-          <option value="hiking_trails">Hiking Trails</option>
-          <option value="horse_trails">Horse Trails</option>
-          <option value="mountain_bike_trails">Mountain Bike Trails</option>
-          <option value="boat_launch">Boat Launch</option>
-          <option value="camping_available_by_permit">Camping</option>
-          <option value="fishing_by_permit">Fishing</option>
-          <option value="lake">Lake</option>
-          <option value="canoe_launch">Canoe Launch</option>
-          <option value="community_garden">Community Garden</option>
-          <option value="historic_features">Historic Features</option>
-        </select>
-        <button class="parks-search-button" id="button1">Search</button>
-      </section>
-      <section class="art-search-container">
-        <input
-          type="text"
-          placeholder="public art by description"
-          id="art-search-input"
-        />
-        <button class="art-search-button" id="button2">Search</button>
-      </section>
-      <section class="restaurant-search-container">
-        <input
-          type="text"
-          placeholder="restaurant by price (1-4)"
-          id="restaurant-search-input"
-        />
-        <button class="restaurant-search-button" id="button3">Search</button>
-      </section>
-      <section class="concert-search-container">
-        <input
-          type="text"
-          placeholder="concerts by genre"
-          id="concert-search-input"
-        />
-        <button class="concert-search-button" id="button4">Search</button>
-      </section>
-    </section>
-    <section class="search-results"></section>
-    <hr>
-    <section class="itinerary-display">
-        <h2>My Itinerary</h2>
-        <section class="results">
-            <section class="parks-results"></section>
-            <section class="art-results"></section>
-            <section class="restaurant-results"></section>
-            <section class="concert-results"></section>
-        </section>
-    </section>
+    <div class="wrapper">
+      <div class="content-container">
+        <div class="content-boxes">
+          <h1>Welcome to Nashville</h1>
+          <hr>
+          <h2>What do you want to see today?</h2>
+          <hr>
+          <section class="search-container">
+            <section class="parks-search-container">
+              <select class = "feature-list"id="park-search-input">
+                <option value="" disabled selected>Choose Feature</option>
+                <option value="community_center">Community Center</option>
+                <option value="nature_center">Nature Center</option>
+                <option value="playground">Playground</option>
+                <option value="ada_accessible">ADA Accessible</option>
+                <option value="restrooms_available">Restrooms</option>
+                <option value="picnic_shelters">Picnic Shelters</option>
+                <option value="dog_park">Dog Park</option>
+                <option value="baseball_fields">Baseball Fields</option>
+                <option value="basketball_courts">Basketball Courts</option>
+                <option value="volleyball">Volleyball</option>
+                <option value="soccer_fields">Soccer Fields</option>
+                <option value="football-multi-purpose-fields">Football Fields</option>
+                <option value="tennis_courts">Tennis Courts</option>
+                <option value="disc_golf">Disc Golf</option>
+                <option value="skate_park">Skate Park</option>
+                <option value="swimming_pool">Swimming Pool</option>
+                <option value="spray_park">Spray Park</option>
+                <option value="golf_course">Golf Course</option>
+                <option value="walk_jog_path">Walking Path</option>
+                <option value="hiking_trails">Hiking Trails</option>
+                <option value="horse_trails">Horse Trails</option>
+                <option value="mountain_bike_trails">Mountain Bike Trails</option>
+                <option value="boat_launch">Boat Launch</option>
+                <option value="camping_available_by_permit">Camping</option>
+                <option value="fishing_by_permit">Fishing</option>
+                <option value="lake">Lake</option>
+                <option value="canoe_launch">Canoe Launch</option>
+                <option value="community_garden">Community Garden</option>
+                <option value="historic_features">Historic Features</option>
+              </select>
+              <button class="parks-search-button" id="button1">Search</button>
+            </section>
+            <section class="art-search-container">
+              <input
+                type="text"
+                placeholder="public art by description"
+                id="art-search-input"
+              />
+              <button class="art-search-button" id="button2">Search</button>
+            </section>
+            <section class="restaurant-search-container">
+              <input
+                type="text"
+                placeholder="restaurant by price (1-4)"
+                id="restaurant-search-input"
+              />
+              <button class="restaurant-search-button" id="button3">Search</button>
+            </section>
+            <section class="concert-search-container">
+              <input
+                type="text"
+                placeholder="concerts by genre"
+                id="concert-search-input"
+              />
+              <button class="concert-search-button" id="button4">Search</button>
+            </section>
+          </section>
+          <section class="search-results"></section>
+          <hr>
+          <section class="itinerary-display">
+              <h2>My Itinerary</h2>
+              <section class="results">
+                  <section class="parks-results"></section>
+                  <section class="art-results"></section>
+                  <section class="restaurant-results"></section>
+                  <section class="concert-results"></section>
+              </section>
+          </section>
+        </div>
+      </div>
+    </div>
     <script src="/src/scripts/dom.js"></script>
     <script src="/src/scripts/parks-getter.js"></script>
     <script src="/src/scripts/search-parks.js"></script>
@@ -97,6 +104,8 @@
     <script src="/src/scripts/results.js"></script>
     <script src="/src/scripts/itinerary.js"></script>
     <script src="/src/scripts/keys.js"></script>
+    <script src="/src/scripts/styling.js"></script>
+    
 </body>
 
 </html>

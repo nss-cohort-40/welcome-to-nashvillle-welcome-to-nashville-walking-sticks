@@ -1,0 +1,1 @@
+$(".content-boxes").hide().fadeIn(3000)
