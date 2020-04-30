@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/src/styles/main.css">
     <title>Welcome to Nashville</title>
   </head>
 
@@ -76,8 +76,13 @@
     <section class="search-results"></section>
     <hr>
     <section class="itinerary-display">
-      <h2>My Itinerary</h2>
-      <ul id = "list"></ul>
+        <h2>My Itinerary</h2>
+        <section class="results">
+            <section class="park-results"></section>
+            <section class="art-results"></section>
+            <section class="restaurant-results"></section>
+            <section class="concert-results"></section>
+        </section>
     </section>
     <script src="/src/scripts/dom.js"></script>
     <script src="/src/scripts/parks-getter.js"></script>
