@@ -7,7 +7,7 @@ const makeConcertComponent = (data, counter) => {
 
 const makeArtComponent = (data, counter) => {
   return `
-    <p>${counter}. ${data.artwork} at ${data.location} 
+    <p id="content-${counter}">${counter}. ${data.artwork} at ${data.location} 
       <button type="submit" id="save-${counter}">Save</button>
       `;
 };
@@ -26,6 +26,6 @@ const makeItineraryComponent = (value, type) => {
   } else if (type == "restaurant") {
     return ``
   } else if (type == "art") {
-    return ``
+    return `<p id="art-result">Art: ${value}</p>`
   }
 };
