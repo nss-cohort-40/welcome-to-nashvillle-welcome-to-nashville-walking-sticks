@@ -46,11 +46,13 @@ rootElement.addEventListener("click", function (event) {
     } else if (document.getElementById("results").innerHTML == "Restaurant Results") {
       if (itineraryBox.querySelector(".restaurant-results").innerHTML == "") {
       document.querySelector(".restaurant-results").innerHTML += makeItineraryComponent(restaurantName, "restaurant");
+      itinObj.restaurant = restaurantName.substring(0, restaurantName.indexOf(' $'));
       }
       else if (itineraryBox.querySelector("#restaurant-result") != null) {
         // debugger
         resetResults("restaurant");
         document.querySelector("#restaurant-result").innerHTML = makeItineraryComponent(restaurantName, "restaurant");
+        itinObj.restaurant = restaurantName.substring(0, restaurantName.indexOf(' $'));
     }
     }
   }
