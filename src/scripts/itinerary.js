@@ -21,6 +21,15 @@ rootElement.addEventListener("click", function (event) {
         resetResults("concert");
         document.querySelector("#concert-result").innerHTML = makeItineraryComponent(concertName, "concert");
     }
+
+    
+    } else if (document.getElementById("results").innerHTML == "Concert Results") {
+      if (itineraryBox.querySelector(".concert-results").innerHTML == "") {
+        document.querySelector(".concert-results").innerHTML += makeItineraryComponent(concertName, "concert");
+      } else if (itineraryBox.querySelector("#concert-result") != null) {
+        resetResults("concert");
+        document.querySelector("#concert-result").innerHTML = makeItineraryComponent(concertName, "concert");
+    }
     }
 
   }
