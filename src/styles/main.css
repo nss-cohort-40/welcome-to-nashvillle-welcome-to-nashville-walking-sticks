@@ -1,5 +1,7 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: aqua;
+    
 }
 
 .search-container {
@@ -8,6 +10,12 @@ body {
     padding: 20px;
     border: 2px solid black;
     border-radius: 13px;
+}
+
+.feature-list{
+    width: 173px;
+
+
 }
 
 .parks-search-container {
