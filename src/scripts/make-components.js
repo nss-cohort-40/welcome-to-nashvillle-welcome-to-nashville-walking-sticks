@@ -1,19 +1,20 @@
 const makeConcertComponent = (data, counter) => {
   return `
-      <p id="content-${counter}">${counter}. ${data.name} at the ${data._embedded.venues["0"].name} 
+      <p id="content-${counter}">${counter}. ${data.name} at the ${data._embedded.venues["0"].name}</p> 
       <button type="submit" id="save-${counter}">Save</button>
       `;
 };
 
 const makeArtComponent = (data, counter) => {
   return `
-    <p id="content-${counter}">${counter}. ${data.artwork} at ${data.location} 
-      <button type="submit" id="save-${counter}">Save</button>
-      `;
+    <p id="content-${counter}">${counter}. "${data.artwork}" at ${data.location}</p>
+    <a href="${data.page_link.url}" target="_blank">More info</a>
+    <button type="submit" id="save-${counter}">Save</button>
+    `;
 };
 
 const makeParkComponent = (data, counter) => {
-  return`<p id ="content-${counter}">${counter}. ${data} 
+  return`<p id ="content-${counter}">${counter}. ${data}</p> 
   <button type="submit" id="save-${counter}">Save</button>
   `;
 }
