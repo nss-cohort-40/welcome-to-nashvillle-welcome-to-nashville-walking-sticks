@@ -18,6 +18,12 @@ const makeParkComponent = (data, counter) => {
   <button type="submit" id="save-${counter}">Save</button>
   `;
 }
+
+const makeRestaurantComponent = (data, counter) => {
+  return`<p id ="content-${counter}">${counter}. ${data} 
+  <button type="submit" id="save-${counter}">Save</button>
+  `
+}
  
 const makeItineraryComponent = (value, type) => {
   if (type == "concert") {
@@ -25,7 +31,7 @@ const makeItineraryComponent = (value, type) => {
   } else if (type == "parks") {
     return `<p id="parks-result">Park: ${value}</p>`
   } else if (type == "restaurant") {
-    return ``
+    return `<p id="restaurant-result">Restaurant: ${value.replace(/\$/g, "")}</p>`
   } else if (type == "art") {
     return `<p id="art-result">Art: ${value}</p>`
   }

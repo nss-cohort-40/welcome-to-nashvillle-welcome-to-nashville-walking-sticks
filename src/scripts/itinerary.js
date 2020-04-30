@@ -7,6 +7,7 @@ rootElement.addEventListener("click", function (event) {
     concertName = getResult(number)
     artName = getResult(number)
     parkName = getResult(number)
+    restaurantName = getResult(number)
 
     if (document.getElementById("results").innerHTML == "Art Results") {
       if (itineraryBox.querySelector(".art-results").innerHTML == "") {
@@ -28,6 +29,15 @@ rootElement.addEventListener("click", function (event) {
       } else if (itineraryBox.querySelector("#parks-result") != null) {
         resetResults("parks");
         document.querySelector("#parks-result").innerHTML = makeItineraryComponent(parkName, "parks");
+    }
+    } else if (document.getElementById("results").innerHTML == "Restaurant Results") {
+      if (itineraryBox.querySelector(".restaurant-results").innerHTML == "") {
+      document.querySelector(".restaurant-results").innerHTML += makeItineraryComponent(restaurantName, "restaurant");
+      }
+      else if (itineraryBox.querySelector("#restaurant-result") != null) {
+        // debugger
+        resetResults("restaurant");
+        document.querySelector("#restaurant-result").innerHTML = makeItineraryComponent(restaurantName, "restaurant");
     }
     }
 
