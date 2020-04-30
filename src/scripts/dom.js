@@ -3,6 +3,16 @@ let rootElement = document.querySelector("body");
 rootElement.addEventListener("click", function (event) {
   let targetElement = event.target;
   if (targetElement.id == "button1") {
+    searchParam = document.querySelector (`#park-search-input`).value;
+    resultsController.resetResults();
+    //  = searchParam.options[selectElement.selectedIndex].value;
+    if (searchParam == "") {
+        resetResults();
+        window.alert("Please enter a search term.");
+      } else {
+        searchParks(searchParam);
+      }
+
   } else if (targetElement.id == "button2") {
     document.querySelector(".search-results").innerHTML = "<h2>Results</h2>";
     resultsController.resetResults();

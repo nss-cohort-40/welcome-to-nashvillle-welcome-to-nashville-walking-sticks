@@ -13,7 +13,7 @@ const makeArtComponent = (data, counter) => {
 };
 
 const makeParkComponent = (data, counter) => {
-  return`<p>${counter}. ${data.park_name} at ${data.mapped_location.human_address} 
+  return`<p id ="content-${counter}">${counter}. ${data} 
   <button type="submit" id="save-${counter}">Save</button>
   `;
 }
