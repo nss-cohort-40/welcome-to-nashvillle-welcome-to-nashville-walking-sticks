@@ -4,13 +4,14 @@ rootElement.addEventListener("click", function (event) {
   let targetElement = event.target;
   if (targetElement.id == "button1") {
   } else if (targetElement.id == "button2") {
-    document.querySelector(".search-results").innerHTML = "<h2>Results</h2>";
     resultsController.resetResults();
-    searchParam = document.getElementById("art-input").value;
+    document.querySelector(".search-results").innerHTML = "<h2 id=\"results\">Art Results</h2>";
+    searchParam = document.getElementById("art-search-input").value;
     if (searchParam == "") {
       resultsController.resetResults();
       window.alert("Please enter a search term.");
     } else {
+      // debugger
       searchArt(searchParam);
     }
   } else if (targetElement.id == "button3") {
@@ -18,7 +19,7 @@ rootElement.addEventListener("click", function (event) {
   } else if (targetElement.id == "button4") {
     // debugger
     resultsController.resetResults();
-    document.querySelector(".search-results").innerHTML = "<h2>Results</h2>";
+    document.querySelector(".search-results").innerHTML = "<h2 id=\"results\">Concert Results</h2>";
     searchParam = document.getElementById("concert-search-input").value;
     if (searchParam == "") {
       resetResults();
