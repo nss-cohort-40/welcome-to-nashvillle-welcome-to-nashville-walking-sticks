@@ -13,7 +13,7 @@ const makeArtComponent = (data, counter) => {
 };
 
 const makeParkComponent = (data, counter) => {
-  return`<p>${counter}. ${data.park_name} at ${data.mapped_location.human_address} 
+  return`<p id ="content-${counter}">${counter}. ${data} 
   <button type="submit" id="save-${counter}">Save</button>
   `;
 }
@@ -21,8 +21,8 @@ const makeParkComponent = (data, counter) => {
 const makeItineraryComponent = (value, type) => {
   if (type == "concert") {
     return `<p id="concert-result">Concert: ${value}</p>`
-  } else if (type == "park") {
-    return ``
+  } else if (type == "parks") {
+    return `<p id="parks-result">Park: ${value}</p>`
   } else if (type == "restaurant") {
     return ``
   } else if (type == "art") {
