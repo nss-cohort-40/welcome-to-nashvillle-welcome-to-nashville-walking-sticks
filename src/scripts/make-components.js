@@ -21,8 +21,8 @@ const makeParkComponent = (data, counter) => {
 const makeItineraryComponent = (value, type) => {
   if (type == "concert") {
     return `<p id="concert-result">Concert: ${value}</p>`
-  } else if (type == "park") {
-    return ``
+  } else if (type == "parks") {
+    return `<p id="parks-result">Park: ${value}</p>`
   } else if (type == "restaurant") {
     return ``
   } else if (type == "art") {
