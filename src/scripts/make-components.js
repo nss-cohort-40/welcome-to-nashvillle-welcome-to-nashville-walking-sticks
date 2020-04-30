@@ -30,7 +30,7 @@ const makeItineraryComponent = (value, type) => {
   } else if (type == "parks") {
     return `<p id="parks-result">Park: ${value}</p>`
   } else if (type == "restaurant") {
-    return `<p id="restaurant-result">Restaurant: ${value}</p>`
+    return `<p id="restaurant-result">Restaurant: ${value.replace(/\$/g, "")}</p>`
   } else if (type == "art") {
     return `<p id="art-result">Art: ${value}</p>`
   }
