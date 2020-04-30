@@ -18,6 +18,6 @@ const makeParkComponent = (data, counter) => {
   `;
 }
  
-const makeInineraryComponent = () => {
+const makeItineraryComponent = () => {
   
 };
