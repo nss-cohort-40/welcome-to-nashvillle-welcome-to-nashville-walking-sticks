@@ -8,6 +8,8 @@ const itinObj = {
 rootElement.addEventListener("click", function (event) {
   itineraryBox = document.querySelector(".itinerary-display");
   if (event.target.id.split("-")[0] == "save") {
+    $(".itinerary-display").fadeTo(4000, 1)
+    $(".results").fadeTo(4000, 1)
     number = event.target.id.split("-")[1];
     
     
@@ -15,7 +17,6 @@ rootElement.addEventListener("click", function (event) {
     artName = getResult(number)
     parkName = getResult(number)
     restaurantName = getResult(number)
-
     if (document.getElementById("results").innerHTML == "Art Results") {
       if (itineraryBox.querySelector(".art-results").innerHTML == "") {
         document.querySelector(".art-results").innerHTML += makeItineraryComponent(artName, "art");
@@ -56,11 +57,9 @@ rootElement.addEventListener("click", function (event) {
     }
   }
 });
-
 function resetResults(resultType) {
   document.querySelector(`#${resultType}-result`).innerHTML = "";
 }
-
 const getResult = (number) => {
   content = document.querySelector(`#content-${number}`).innerHTML;
   splitSentence = content.split("<button");
