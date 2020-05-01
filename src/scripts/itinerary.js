@@ -62,13 +62,14 @@ function resetResults(resultType) {
   document.querySelector(`#${resultType}-result`).innerHTML = "";
 }
 
+debugger;
 const getResult = (number) => {
   content = document.querySelector(`#content-${number}`).innerHTML;
   splitSentence = content.split("<button");
   return name = splitSentence[0].substr(3);
 };
 
-document.getElementById("save-itin").addEventListener("click", function () {
+document.getElementById("record-itin").addEventListener("click", function () {
   fetch("http://localhost:8088/itinerary", {
     method: "POST",
     body: JSON.stringify(itinObj),
