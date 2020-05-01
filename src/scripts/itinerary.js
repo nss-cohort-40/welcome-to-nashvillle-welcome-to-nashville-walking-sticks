@@ -49,7 +49,6 @@ rootElement.addEventListener("click", function (event) {
       itinObj.restaurant = restaurantName.substring(0, restaurantName.indexOf(' $'));
       }
       else if (itineraryBox.querySelector("#restaurant-result") != null) {
-        // debugger
         resetResults("restaurant");
         document.querySelector("#restaurant-result").innerHTML = makeItineraryComponent(restaurantName, "restaurant");
         itinObj.restaurant = restaurantName.substring(0, restaurantName.indexOf(' $'));
@@ -68,7 +67,7 @@ const getResult = (number) => {
   return name = splitSentence[0].substr(3);
 };
 
-document.getElementById("save-itin").addEventListener("click", function () {
+document.getElementById("record-itin").addEventListener("click", function () {
   fetch("http://localhost:8088/itinerary", {
     method: "POST",
     body: JSON.stringify(itinObj),
@@ -77,5 +76,4 @@ document.getElementById("save-itin").addEventListener("click", function () {
     },
   })
     .then(res => res.json())
-    // .then(res => console.log(res))
 })
