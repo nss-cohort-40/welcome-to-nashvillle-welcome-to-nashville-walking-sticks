@@ -20,7 +20,7 @@ const makeParkComponent = (data, counter) => {
 }
 
 const makeRestaurantComponent = (data, counter) => {
-  return`<p id ="content-${counter}">${counter}. ${data} 
+  return`<p id ="content-${counter}">${counter}. ${data}</p>
   <button type="submit" id="save-${counter}">Save</button>
   `
 }
