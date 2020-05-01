@@ -14,5 +14,3 @@ $(".btn").click(function (){
     $(".search-results-container").fadeTo(4000, 1)
     $(".search-results").fadeTo(4500, 1)
 })
-// $(".itinerary-display").fadeTo(6000,1)
-// $(".results").fadeTo(6500,1)
