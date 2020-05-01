@@ -37,7 +37,6 @@ rootElement.addEventListener("click", function (event) {
       document.querySelector(".restaurant-results").innerHTML += makeItineraryComponent(restaurantName, "restaurant");
       }
       else if (itineraryBox.querySelector("#restaurant-result") != null) {
-        // debugger
         resetResults("restaurant");
         document.querySelector("#restaurant-result").innerHTML = makeItineraryComponent(restaurantName, "restaurant");
     }
@@ -55,3 +54,14 @@ const getResult = (number) => {
   splitSentence = content.split("<button");
   return name = splitSentence[0].substr(3);
 };
+
+document.getElementById("record-itin").addEventListener("click", function () {
+  fetch("http://localhost:8088/itinerary", {
+    method: "POST",
+    body: JSON.stringify(itinObj),
+    headers: {
+      "Content-Type": "application/json"
+    },
+  })
+    .then(res => res.json())
+})

@@ -33,7 +33,6 @@ rootElement.addEventListener("click", function (event) {
       searchRestaurant(searchParam);
     }
   } else if (targetElement.id == "button4") {
-    // debugger
     resultsController.resetResults();
     document.querySelector(".search-results").innerHTML = "<h2 id=\"results\">Concert Results</h2>";
     searchParam = document.getElementById("concert-search-input").value;
